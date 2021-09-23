@@ -7,7 +7,6 @@ const cors = require("cors"); // allows/disallows cross-site communication
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const config = require("./config");
 const pino = require("express-pino-logger")();
 const { videoToken } = require("./server/tokens");
 const AudioProcessor = require("./server/audio-processor");
@@ -21,9 +20,13 @@ var fs = require("fs");
 const { connect } = require("twilio-video");
 const Twilio = require("twilio");
 
-var client = new Twilio(config.twilio.apiKey, config.twilio.apiSecret, {
-  accountSid: config.twilio.accountSid,
-});
+var client = new Twilio(
+  "SKc6dbd10e1b9ec0fd5c3606461c6ceff3",
+  "Xvv9pop4eMToKUCFwBPYWYTtw7QWz3iR",
+  {
+    accountSid: "AC71013744d21d34272896475247890546",
+  }
+);
 const axios = require("axios").default;
 
 var imageCapture;
