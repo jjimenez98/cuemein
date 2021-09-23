@@ -7,7 +7,6 @@ const cors = require("cors"); // allows/disallows cross-site communication
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const pino = require("express-pino-logger")();
 const { videoToken } = require("./server/tokens");
 const AudioProcessor = require("./server/audio-processor");
 const { ProcessAudio } = require("./server/audio-processor");
