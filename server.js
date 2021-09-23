@@ -7,11 +7,11 @@ const cors = require("cors"); // allows/disallows cross-site communication
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const { videoToken } = require("./server/tokens");
-const AudioProcessor = require("./server/audio-processor");
-const { ProcessAudio } = require("./server/audio-processor");
-const ImageProcessor = require("./server/image-processor");
-const { ProcessImage } = require("./server/image-processor");
+const { videoToken } = require("./tokens");
+const AudioProcessor = require("./audio-processor");
+const { ProcessAudio } = require("./audio-processor");
+const ImageProcessor = require("./image-processor");
+const { ProcessImage } = require("./image-processor");
 var fs = require("fs");
 //var Video = require('twilio-video');
 //var helpers = require('./helpers_old');
@@ -19,13 +19,10 @@ var fs = require("fs");
 const { connect } = require("twilio-video");
 const Twilio = require("twilio");
 
-var client = new Twilio(
-  "SKc6dbd10e1b9ec0fd5c3606461c6ceff3",
-  "Xvv9pop4eMToKUCFwBPYWYTtw7QWz3iR",
-  {
-    accountSid: "AC71013744d21d34272896475247890546",
-  }
-);
+var client = new Twilio(config.twilio.apiKey, config.twilio.apiSecret, {
+  accountSid: config.twilio.accountSid,
+});
+
 const axios = require("axios").default;
 
 var imageCapture;

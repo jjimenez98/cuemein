@@ -13,6 +13,7 @@ var fs = require("fs");
 //var takeLocalVideoSnapshot = helpers.takeLocalVideoSnapshot;
 const { connect } = require("twilio-video");
 const Twilio = require("twilio");
+
 var client = new Twilio(config.twilio.apiKey, config.twilio.apiSecret, {
   accountSid: config.twilio.accountSid,
 });
