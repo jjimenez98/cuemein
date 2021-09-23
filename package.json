@@ -2,7 +2,7 @@
   "name": "capstone",
   "version": "0.1.0",
   "private": true,
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
