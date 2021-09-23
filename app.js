@@ -34,7 +34,7 @@ var emotionsLookup = {};
 const whitelist = [
   "http://localhost:3000",
   "http://localhost:8080",
-  "https://shrouded-journey-38552.herokuapp.com",
+  "https://cuemeinn.herokuapp.com",
 ];
 const corsOptions = {
   origin: function (origin, callback) {
