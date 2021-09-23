@@ -1,7 +1,6 @@
 {
   "name": "capstone",
   "version": "0.1.0",
-  "private": true,
   "main": "server.js",
   "dependencies": {
     "body-parse": "^0.1.0",
